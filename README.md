@@ -1,2 +1,2 @@
 # HeadFirst-JavaScript-Programming_ABCD-Version
-ABCD Javascript Study Data
+ABCD Javascript Study Data (Korea Version)
