@@ -1,0 +1,29 @@
+LOOP : 전함이 가라앉지 않은 동안
+  게이머 추측값 입력
+  게이머 입력값과 정당한 입력값 비교
+    IF 입력값이 올바르지 않음
+      입력값이 올바르지 않다고 알려준다.
+    ELSE 
+      guesses에 1을 더한다.
+      IF 추측값이 맞나?
+        hits에 1을 더한다.
+        IF hits 가 3인가?
+          isSunk를 true로 설정한다.
+          "전함 침몰!" 메시지 출력
+        END IF
+      END IF
+    END ELSE
+  END LOOP
+  게임결과를 보여준다.
+  
+  
+  
+  location1 location2 location3 guess guesses hits isSunk
+      3         4         5       -     0      0    false
+      3         4         5       1     1      0    false
+                                  3
+                                  4
+                                  
+                                  
+                                  
+                                  

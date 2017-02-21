@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>전함 게임</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>전함 게임!</h1>
+    <script src="battleship.js"></script>
+    <script>
+      while(isSunk == false) {
+        guess = prompt("준비, 조준, 발사! (0에서 6까지 중 추측한 숫자를 입력하세요!):");
+        
+        if (guess < 0 || guess > 6) {
+          alert("올바른 방 번호를 입력하세요!");
+        } else {
+          guesses = guesses + 1;
+        }
+      }
+    </script>
+  </body>
+</html>

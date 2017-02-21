@@ -1,0 +1,41 @@
+<script>
+//  if (inStock == true) {
+//    if (onSale == true) {
+//      // 세일 중인것 같다.
+//      alert("질러, 질러, 질러!");
+//    }
+//  }
+//  
+//  
+//  if (inStock == true && onSale == true) {
+//    // 세일 중인듯
+//    alert("질러, 질러, 질러!")
+//  }
+//  
+//  if (inStock == true && (onSale == true || price < 60)) {
+//    // 세일 중인듯
+//    alert("질러, 질러, 질러!")
+//  }
+  
+  // 연필을 깎으며 
+  var temp = 81;
+  var willRain = true;
+  var humid = (temp > 80 && willRain == true);
+  
+  var guess = 6;
+  var isValid = (guess >= 0 && guess <= 6);
+  
+  var KB = 1287;
+  var tooBig = (KB > 1000);
+  var urgent = true;
+  var sendFile = (urgent == true || tooBig == false);
+  
+  var keyPressed = "N";
+  var points = 142;
+  var level;
+  if (keyPressed == "Y" || points > 100 && points < 200) {
+    level = 2;
+  } else {
+    level = 1;
+  }  
+</script>
