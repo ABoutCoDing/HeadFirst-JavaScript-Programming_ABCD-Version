@@ -1,0 +1,14 @@
+<script>
+  var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
+  var highScore = 60;
+  
+  var bestSolutions = [];
+  for (var i = 0; i <scores.length; i++ ) {
+    if (scores[i] == highScore ) {
+      bestSolutions.push(i);
+//      bestSolutions[bestSolutions.length] = i;
+    }
+  }
+  console.log("최고 점수 용액 번호 : " + bestSolutions);
+
+</script>

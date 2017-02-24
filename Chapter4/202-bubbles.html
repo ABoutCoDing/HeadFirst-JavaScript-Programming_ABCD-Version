@@ -1,0 +1,56 @@
+<script>
+  var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
+  var costs  = [.25, .27, .25, .25, .25, .25, .33, .31, .25, .29];
+  
+  function printAndGetHighScore(scores) {
+    var highScore = 0;
+    var output;
+    for (var i = 0; i < scores.length; i++){
+      output = "비눗방울 용액 #" + i + " 점수 : " + scores[i];
+      console.log(output);
+      if (scores[i] > highScore ){
+        highScore = scores[i];
+      }
+    }
+    return highScore;
+  }
+  
+  function getBestResults(scores, highScore) {
+    var bestSolutions = [];
+    for (var i = 0; i < scores.length; i++ ) {
+      if (scores[i] == highScore){
+        bestSolutions.push(i);
+      }
+    }
+    return bestSolutions;
+  }
+  
+  function getMustCostEffectiveSolution(scores, costs, highscore) {
+    var cost = 100;
+    var index;
+    for (var i=0; i < scores.length; i++) {
+      if (scores[i] == highscore ) {
+        if ( cost > costs[i] )  {    
+          index = i;
+          cost = costs[i];
+        }
+//        if ( cost < costs[i] )  {    
+//        } else {
+//          index = i;
+//          cost = costs[i];
+//        }
+      }
+    }
+    return index;
+  }
+  
+  var highScore = printAndGetHighScore(scores);
+  console.log("비눗방울 실험 횟수 : " + scores.length);
+  console.log("최고 비눗방울 점수 : " + highScore);
+    
+  var bestSolutions = getBestResults(scores, highScore);
+  console.log("최고 점수 용액 번호 : " + bestSolutions);
+  
+  var mostCostEffective = getMustCostEffectiveSolution(scores, costs, highScore);
+  console.log("비눗방울 용액 #" + mostCostEffective + "이 비용 효율이 가장 좋습니다.")
+</script>

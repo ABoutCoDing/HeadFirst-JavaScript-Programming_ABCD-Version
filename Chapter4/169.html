@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>프레이조매틱</title>
+    <meta charset ="utf-8">
+    <script>
+      function makePhrases() {
+        var words1 = ["24/7", "다계층", "관리자 관점", "B2B", "윈-윈"];
+        var words2 = ["강화", "부가가치형", "지향", "중심", "제휴"];
+        var words3 = ["프로세스", "솔루션", "전환점", "전략", "비젼"];
+        
+        var rand1 = Math.floor(Math.random() * words1.length);
+        var rand2 = Math.floor(Math.random() * words2.length);
+        var rand3 = Math.floor(Math.random() * words3.length);
+        
+        var pahase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+        alert(pahase);
+      }
+      makePhrases();
+    
+    </script>
+  </head>
+  <body></body>
+</html>
