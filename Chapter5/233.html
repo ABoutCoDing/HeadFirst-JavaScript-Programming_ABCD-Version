@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>오토매틱(Auto-O-Matic</title>
+  <meta charset="utf-8">
+  <script>
+    function makeCar() {
+      var makes = ["쉐보레", "GM", "피아트", "웹타운 모터스", "터커"];
+      var models = ["캐딜락", "500", "벨 에어", "택시", "토피도"];
+      var years = [1955, 1957, 1948, 1954, 1961];
+      var colors = ["빨간색", "파란색", "갈색", "노란색", "흰색"];
+      var convertible = [true, false];
+
+      var rand1 = Math.floor(Math.random() * makes.length);
+      var rand2 = Math.floor(Math.random() * models.length);
+      var rand3 = Math.floor(Math.random() * years.length);
+      var rand4 = Math.floor(Math.random() * colors.length);
+      var rand5 = Math.floor(Math.random() * 5) + 1;
+      var rand6 = Math.floor(Math.random() * 2);
+
+      var car = {
+        make: makes[rand1],
+        model: models[rand2],
+        year: years[rand3],
+        color: colors[rand4],
+        passengers: rand5,
+        convertible: convertible[rand6],
+        mileage: 0
+      };
+      return car;
+    }
+
+    function displayCar(car) {
+      console.log("여러분의 새로운 차는 " + car.year + "년 " + car.make + " " + car.model + "입니다.");
+    }
+
+    var carToSell = makeCar();
+    displayCar(carToSell);
+
+  </script>
+  <body></body>
+</head>
+
+
+</html>

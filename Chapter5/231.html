@@ -1,0 +1,14 @@
+<script>
+  var fido = {
+    name: "피도",
+    weight: 40,
+    breed: "잡종",
+    loves: "산책"
+  };
+
+  function loseWeight(dog, amount) {
+    dog.weight = dog.weight - amount;
+  }
+  loseWeight(fido, 10);
+  alert(fido.name + "의 몸무게는 이제 " + fido.weight + "입니다.");
+</script>

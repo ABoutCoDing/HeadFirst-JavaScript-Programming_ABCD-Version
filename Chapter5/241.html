@@ -1,0 +1,48 @@
+<script>
+  var fiat = {
+    make: "피아트",
+    model: "500",
+    year: 1957,
+    color: "암청색",
+    pessengers: 2,
+    convertible: false,
+    mileage: 88000,
+    started: false,
+    fuel: 0,
+    start: function() {
+      this.started = true;
+    },
+    stop: function() {
+      this.started = false;
+    },
+    drive: function() { // 행동, 메서드
+      if (this.started) {
+//        alert("붕붕!");
+
+        if(this.fuel > 0) {
+          alert(this.make + " " + this.model + "가 붕붕하고 갑니다!");
+          this.fuel = this.fuel - 1;
+        } else {
+          alert("저런, 연료가 떨어졌네요.");
+          this.stop();
+        }
+
+      } else {
+        alert("먼저 시동을 거세요.");
+      }
+    },
+    addFuel: function(amout){
+      this.fuel = this.fuel + amout;
+    }
+  };
+
+  fiat.start();
+  fiat.drive();
+  fiat.addFuel(2);
+  fiat.start();
+  fiat.drive();
+  fiat.drive();
+  fiat.drive();
+  fiat.stop();
+
+</script>

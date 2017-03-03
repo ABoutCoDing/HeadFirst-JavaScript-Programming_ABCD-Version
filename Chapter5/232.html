@@ -1,0 +1,32 @@
+<script>
+  function getSecret(file, secretPassword) {
+    file.opened = file.opened + 1;
+    if (secretPassword == file.password )  {
+      return file.contents;
+    } else {
+      return "올바르지 않은 패스워드 입니다! 비밀을 열람할 수 없습니다.";
+    }
+  }
+
+  function setSecret(file, secretPassword, secret) {
+    if (secretPassword == file.password) {
+      file.opened = 0;
+      file.contents = secret;
+    }
+  }
+
+  var superSecretFile = {
+    level: "2급 비밀",
+    opened: 0,
+    password: 2,
+    contents: "닥터 이블의 다음 회의는 디트로이트에서 있습니다."
+  };
+
+  var secret = getSecret(superSecretFile, 2);
+  console.log(secret);
+
+  setSecret(superSecretFile, 2, "닥터 이블의 다음 회의는 디트로이트에서 있습니다.");
+  secret = getSecret(superSecretFile, 2);
+  console.log(secret);
+
+</script>

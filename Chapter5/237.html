@@ -1,0 +1,25 @@
+<script>
+  var fiat = {
+    make: "피아트",
+    model: "500",
+    year: 1957,
+    color: "암청색",
+    pessengers: 2,
+    convertible: false,
+    mileage: 88000,
+    started: false,
+    start: function() {
+      started = true;
+    },
+    stop: function() {
+      started = false;
+    },
+    drive: function() { // 행동, 메서드
+      if (started) {
+        alert("붕붕!");
+      } else {
+        alert("먼저 시동을 거세요.");
+      }
+    }
+  };
+</script>
