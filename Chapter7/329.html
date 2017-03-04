@@ -1,0 +1,24 @@
+<script type="text/javascript">
+var testThis;
+
+if (testThis) {
+  console.log('실행되지 않습니다.');
+}
+
+var element = document.getElementById('존재하지 않는 요소');
+if (element) {
+  console.log('실행되지 않습니다.');
+}
+
+if (0) {
+  console.log('숫자 0은 false 입니다.');
+}
+
+if ('') {
+  console.log('빈 문자열 역시 false 입니다.');
+}
+
+if (NaN) {
+  console.log('NaN도 역시 false 입니다.');
+}
+</script>

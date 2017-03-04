@@ -1,0 +1,45 @@
+<script type="text/javascript">
+var question1,
+    question2,
+    question3,
+    question4,
+    question5,
+    question6,
+    array = [],
+    object = {};
+
+object.deletedValue = '삭제될 예정입니다.';
+object.undefinedValue = undefined;
+
+// 저는 함수 안에 return문이 없을 때 반환됩니다.
+function noRetrun() {
+  console.log('In noRetrun()');
+}
+question1 = noRetrun();
+console.log('저는 함수 안에 return문이 없을 때 반환됩니다.');
+console.log(question1);
+
+// 저는 값이 할당되지 않은 변수가 갖고 있는 값입니다.
+console.log('저는 값이 할당되지 않은 변수가 갖고 있는 값입니다.');
+console.log(question2);
+
+//저는 희박 배열(190쪽 참조) 안에서 존재하지 않는 배열 요소의 값입니다.
+array[0] = 0;
+array[100] = 100;
+console.log('저는 희박 배열 안에서 존재하지 않는 배열 요소의 값입니다.');
+console.log(array[1]);
+
+// 저는 존재하지 않는 속성이 가진 값입니다.
+console.log('저는 존재하지 않는 속성이 가진 값입니다.');
+console.log(object.value);
+
+// 저는 삭제된 속성이 가진 값입니다.
+console.log('저는 삭제된 속성이 가진 값입니다.');
+console.log(object.deletedValue);
+delete object.deletedValue;
+console.log(object.deletedValue);
+
+// 저는 객체를 생설할 때 속성에 할당할 수 없는 값입니다.
+console.log('저는 객체를 생설할 때 속성에 할당할 수 없는 값입니다.');
+console.log(object.undefinedValue);
+</script>
