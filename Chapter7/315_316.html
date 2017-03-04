@@ -1,0 +1,26 @@
+<script type="text/javascript">
+// 규칙1
+if ('바닐라' == 99) {
+  console.log('위의 조건문은 false이기에 실행 안됩니다.');
+} else {
+  console.log('문자열은 NaN으로 처리합니다.');
+}
+
+if (1 == true) {
+  console.log('숫자는 true 입니다.');
+}
+
+if ('1' == true) {
+  console.log('문자열 숫자는 true 입니다.');
+}
+
+if (undefined == null) {
+  console.log('undefined와 null값은 일치합니다.');
+}
+
+if (1 == '') {
+  console.log('빈 문자열은 0으로 취급합니다.');
+} else {
+  console.log('빈 문자열은 형변환에 의해 0으로 취급하기에 값이 다릅니다.');
+}
+</script>
