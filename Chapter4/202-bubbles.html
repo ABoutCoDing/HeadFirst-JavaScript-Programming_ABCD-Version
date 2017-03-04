@@ -25,7 +25,7 @@
     return bestSolutions;
   }
   
-  function getMustCostEffectiveSolution(scores, costs, highscore) {
+  function getMostCostEffectiveSolution(scores, costs, highscore) {
     var cost = 100;
     var index;
     for (var i=0; i < scores.length; i++) {
@@ -51,6 +51,6 @@
   var bestSolutions = getBestResults(scores, highScore);
   console.log("최고 점수 용액 번호 : " + bestSolutions);
   
-  var mostCostEffective = getMustCostEffectiveSolution(scores, costs, highScore);
+  var mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
   console.log("비눗방울 용액 #" + mostCostEffective + "이 비용 효율이 가장 좋습니다.")
 </script>
