@@ -16,13 +16,13 @@
 
   callTast(abcdVariable, carObject);
   console.log("variable " + abcdVariable);  // 참조에러     pass by value
-  console.log("object " + carObject.year);  // 접근 가능    pass by reference
+  console.log("object " + carObject.year);  // 접근 가능 (추가된 요소에도)   pass by reference
 
   /* test 2 */
-//  var a = [1, 2];
-//  var b = a;
+//  var originA = [1, 2];
+//  var originB = originA;
 //
-//  a = [];
-//  console.log(b); // [1,2] 객체의 값이 메모리 어딘가에 보관
+//  originA = null;
+//  console.log(originB); // [1,2] 객체의 참조(메모리 주소)가 살아있음
 
 </script>
