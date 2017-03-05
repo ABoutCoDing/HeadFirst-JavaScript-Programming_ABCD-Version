@@ -1,0 +1,28 @@
+<script>
+  /* test 1 */
+
+  var abcdVariable = "ABCD";
+  var carObject = {
+    make: "피아트",
+    model: "500",
+    year: 1957,
+  };
+
+  function callTast(variable, object){         // 인자 object 도 carObject 를 가르킴(메모리주소)
+    console.log("함수속의 변수 " + variable);     // 값을 복사했기 때문에 함수 내에서만 유효
+    object.year = 1957;
+    console.log("함수속의 객체 " + object.year);  // 메모리 참조이기 때문에 어디서나 접근 가능
+  }
+
+  callTast(abcdVariable, carObject);
+  console.log("variable " + abcdVariable);  // 참조에러     pass by value
+  console.log("object " + carObject.year);  // 접근 가능    pass by reference
+
+  /* test 2 */
+  var a = [1, 2];
+  var b = a;
+
+  a = [];
+  console.log(b); // [1,2] 객체의 값이 메모리 어딘가에 보관
+
+</script>
