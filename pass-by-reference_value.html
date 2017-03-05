@@ -8,9 +8,9 @@
 
   function callTest(variable, object){         // 인자 object 도 carObject 를 가르킴(정확히는 메모리 주소)
     variable = "DEFG";  // 값 변경
-    console.log("함수속의 변수 " + variable);     // 값을 복사했기 때문에 함수 내에서만 유효
+    console.log("함수속의 변수 : " + variable);     // 값을 복사했기 때문에 함수 내에서만 유효
     object.year = 1957; // 요소추가
-    console.log("함수속의 객체 " + object.year);
+    console.log("함수속의 객체 : " + object.year);
   }
 
   callTest(abcdVariable, carObject);
@@ -22,6 +22,6 @@
 //  var originB = originA;
 //
 //  originA = null;
-//  console.log(originB); // [1,2] 객체의 참조(메모리 주소)가 살아있음
+//  console.log(originB); // 1,2 객체의 참조(메모리 주소)가 살아있음
 
 </script>
