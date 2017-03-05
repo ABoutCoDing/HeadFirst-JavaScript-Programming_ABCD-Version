@@ -10,12 +10,12 @@
     variable = "DEFG";  // 값 변경
     console.log("함수속의 변수 " + variable);     // 값을 복사했기 때문에 함수 내에서만 유효
     object.year = 1957; // 요소추가
-    console.log("함수속의 객체 " + object.year);  // 참조(메모리)이기 때문에 함수 내에서 유효
+    console.log("함수속의 객체 " + object.year);
   }
 
   callTest(abcdVariable, carObject);
   console.log("pass by value 결과 : " + abcdVariable);        // ABCD 변화 없음
-  console.log("pass by reference 결과 : " + carObject.year);  // 1957 접근 가능 (추가된 요소에도)
+  console.log("pass by reference 결과 : " + carObject.year);  // 1957 추가된 요소에 접근 가능
 
   /* test 2 */
 //  var originA = [1, 2];
