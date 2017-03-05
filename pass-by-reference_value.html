@@ -9,6 +9,7 @@
   };
 
   function callTast(variable, object){         // 인자 object 도 carObject 를 가르킴(정확히는 메모리 주소)
+    variable = "DEFG";
     console.log("함수속의 변수 " + variable);     // 값을 복사했기 때문에 함수 내에서만 유효
     object.year = 1957;
     console.log("함수속의 객체 " + object.year);  // 메모리 참조이기 때문에 어디서나 접근 가능
