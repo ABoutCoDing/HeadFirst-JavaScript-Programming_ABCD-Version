@@ -25,23 +25,36 @@
     return bestSolutions;
   }
   
-  function getMostCostEffectiveSolution(scores, costs, highscore) {
-    var cost = 100;
-    var index;
-    for (var i=0; i < scores.length; i++) {
-      if (scores[i] == highscore ) {
-        if ( cost > costs[i] )  {    
-          index = i;
-          cost = costs[i];
-        }
-//        if ( cost < costs[i] )  {    
-//        } else {
+//  function getMostCostEffectiveSolution(scores, costs, highscore) {
+//    var cost = 100;
+//    var index;
+//    for (var i=0; i < scores.length; i++) {
+//      if (scores[i] == highscore ) {
+//        if ( cost >= costs[i] )  {
+//          console.log(i);
 //          index = i;
 //          cost = costs[i];
 //        }
+//      }
+//    }
+//    return index;
+//  }
+
+
+  function getMostCostEffectiveSolution(scores, costs, highscore) {
+    var cost = 100;
+    var index;
+    var rowCosts = [];
+    for (var i=0; i < scores.length; i++) {
+      if (scores[i] == highscore ) {
+        if ( cost >= costs[i] )  {
+          index = i;
+          cost = costs[i];
+          rowCosts.push(i);
+        }
       }
     }
-    return index;
+    return rowCosts;
   }
   
   var highScore = printAndGetHighScore(scores);
