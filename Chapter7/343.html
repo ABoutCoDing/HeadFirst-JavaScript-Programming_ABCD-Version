@@ -1,0 +1,12 @@
+<script>
+  function Duck(sound) {
+    this.sound = sound;
+    this.quack = function() {console.log(this.sound);}
+  }
+  var toy = new Duck("꽥 꽥");
+
+  toy.quack();
+
+  console.log(typeof toy);
+  console.log(toy instanceof Duck);
+</script>

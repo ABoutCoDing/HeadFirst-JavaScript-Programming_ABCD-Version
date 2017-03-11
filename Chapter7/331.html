@@ -1,0 +1,45 @@
+<script>
+  function lieDectorTest() {
+
+    var lies = 0;
+
+    var stolenDiamond = { };
+    if (stolenDiamond) {
+      console.log("당신은 다이아몬드를 훔쳤습니다.");
+      lies++;
+    }
+    var car = {
+      keysInPocket: null
+    };
+    if (car.keysInPocket) {
+      console.log("오호! 당신은 자동차를 훔쳤군요!");
+      lies++;
+    }
+    if (car.emptyGasTank) {
+      console.log("당신은 자동차를 훔친 후에 몰았습니다.!");
+      lies++;
+    }
+    var foundYouAtTheCrimeScene = [ ];
+    if (foundYouAtTheCrimeScene) {
+      console.log("확실히 유죄입니다.");
+      lies++;
+    }
+    if (foundYouAtTheCrimeScene[0]) {
+      console.log("훔친 물건과 함께 체포되었습니다!");
+      lies++;
+    }
+    var yourName = " ";
+    if (yourName) {
+      console.log("이름을 사실대로 말하지 않았군요.");
+      lies++;
+    }
+    return lies;
+  }
+
+  var numberOfLine = lieDectorTest();
+  console.log("당신은 " + numberOfLine + "번 거짓말을 했습니다.!");
+  if (numberOfLine >= 3) {
+    console.log("유죄입니다.");
+  }
+
+</script>
