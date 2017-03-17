@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>그림 알아맞히기</title>
+    <style>
+    	body { margin: 20px; }
+    </style>
+	<script>
+		window.onload = init;
+
+		function init () {
+			var image = document.getElementById("zero");
+			image.onclick = showAnswer;
+		}
+
+		function showAnswer () {
+			var image = document.getElementById("zero");
+			image.src = "zero.jpg";
+		}
+	</script>
+</head>
+<body>
+	<img id="zero" src="zeroblur.jpg">
+</body>
+</html>

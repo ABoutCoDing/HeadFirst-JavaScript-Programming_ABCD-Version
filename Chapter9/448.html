@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		window.onload = init;
+
+		var tick = true;
+
+		function ticker () {
+			if (tick) {
+				console.log("똑");
+				tick = false;
+			} else {
+				console.log("딱");
+				tick = true;
+			}
+		}
+
+		function init () {
+			setInterval(ticker, 1000);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

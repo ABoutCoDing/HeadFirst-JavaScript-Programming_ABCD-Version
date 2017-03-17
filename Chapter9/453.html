@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>크기를 바꾸지 마세요. 저는 간지럼을 잘 타요</title>
+	<script>
+		window.onload = init;
+
+		function resize () {
+			var element = document.getElementById("display");
+			element.innerHTML = element.innerHTML + "간지러워";
+		}
+	</script>
+</head>
+<body>
+	<p id="display">
+		무슨 일을 해도 좋지만 창 크기는 바꾸지 마세요! 경고합니다!
+	</p>
+	<script>
+		window.onresize = resize;
+	</script>
+</body>
+</html>

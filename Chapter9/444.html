@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>해적 보물</title>
+	<script>
+		window.onload = init;
+		function init () {
+			var map = document.getElementById("map");
+			map.onmousemove = showCoords;
+		}
+
+		function showCoords (eventObj) {
+			var coords = document.getElementById("coords");
+			var x = eventObj.clientX;
+			var y = eventObj.clientY;
+			coords.innerHTML = "지도 좌표 : " + x + ", " + y;
+		}
+	</script>
+</head>
+<body>
+	<img id="map" src="map.jpg">
+	<p id="coords">지도 위에서 마우스를 움직여 좌표를 찾으세요</p>
+</body>
+</html>
