@@ -25,16 +25,16 @@ var model = {
 	shipsSunk: 0,
 
 	// 배들 3척
-	// ships: [
-	// 	{ locations: ["06", "16", "26"], hits: ["","",""]},
-	// 	{ locations: ["24", "34", "44"], hits: ["","",""]},
-	// 	{ locations: ["10", "11", "12"], hits: ["","",""]},
-	// ],
 	ships: [
-		{ locations: [0, 0, 0], hits: ["","",""]},
-		{ locations: [0, 0, 0], hits: ["","",""]},
-		{ locations: [0, 0, 0], hits: ["","",""]},
+		{ locations: ["06", "16", "26"], hits: ["","",""]},
+		{ locations: ["24", "34", "44"], hits: ["","",""]},
+		{ locations: ["10", "11", "12"], hits: ["","",""]},
 	],
+	// ships: [
+	// 	{ locations: [0, 0, 0], hits: ["","",""]},
+	// 	{ locations: [0, 0, 0], hits: ["","",""]},
+	// 	{ locations: [0, 0, 0], hits: ["","",""]},
+	// ],
 
 	// 발사
 	fire: function (guess) {
@@ -200,13 +200,13 @@ function handleKeyPress (e) {
 	}
 }
 
-// function handleMouseclick(e) {
-// 	var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+function handleMouseclick(e) {
+	var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
-// 	var x = Math.floor(e.layerX / (670/7));
-// 	var y = Math.floor(e.layerY / (675/7));
-// 	console.log(alphabet[y],x);
-// 	controller.processGuess(alphabet[y]+x);
-// }
+	var x = Math.floor(e.layerX / (670/7));
+	var y = Math.floor(e.layerY / (675/7));
+	console.log(alphabet[y],x);
+	controller.processGuess(alphabet[y]+x);
+}
 
 window.onload = init;

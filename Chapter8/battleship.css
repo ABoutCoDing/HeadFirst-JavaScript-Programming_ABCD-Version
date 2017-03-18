@@ -18,19 +18,18 @@
 			color: rgb(83,175,19);
 		}
 
-		table {
+/*		table {
 			position: absolute;
 			left: 173px;
 			top: 98px;
-
-			width: 675px;
-			height: 675px;
+			border-spacing: 0px;
 		}
-
-		td, th {
+*/
+		td {
+/*			width: 92px;
+			height: 92px;
+*/
 		    border: 1px solid #dddddd;
-		    text-align: left;
-		    padding: 10px;
 		}
 
 /*		form {
