@@ -1,0 +1,37 @@
+<script>
+  // #1
+  function makePassword(password) {
+    return function guess(passwordGuess) {
+      return (passwordGuess === password);
+    }
+  }
+  var tryGuess = makePassword("secret");
+  console.log("'nope'이 맞을까요? " + tryGuess("nope"));
+  console.log("'secret'이 맞을까요? " + tryGuess("secret"));
+
+  // #2
+  function multN(n) {
+    return function multBy(m) {
+      return n * m;
+    };
+  };
+  var multBy = multN(3);
+  console.log("2 곱하기 : " + multBy(2));
+  console.log("3 곱하기 : " + multBy(3));
+
+  // #3
+  function makeCounter(){
+    var count = 0;
+    return {
+      increment: function() {
+          count++;
+          return count;
+        }
+    }
+  }
+  var counter = makeCounter();
+  console.log(counter.increment());
+  console.log(counter.increment());
+  console.log(counter.increment());
+
+</script>

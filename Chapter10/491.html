@@ -1,0 +1,11 @@
+<script>
+  function addN(n) {
+    var adder = function(x) {
+      return n + x;
+    }
+    return adder;
+  }
+
+  var adder = addN(3);
+  console.log(adder(4));
+</script>

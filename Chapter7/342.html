@@ -2,13 +2,13 @@
   /* 브래드의 코드 */
   function validate(phoneNumber) {
     if (phoneNumber.length > 8 ||
-       phoneNumber.length < 7 ) {
+       phoneNumber.length < 7 ) { // 8, 7
       return false;
     }
     var first = phoneNumber.substring(0, 3);
     var second = phoneNumber.substring(phoneNumber.length-4);
 
-    if (isNaN(first) || isNaN(second)) {
+    if (isNaN(first) || isNaN(second)) {  // 음수 로 인식
       return false;
     }
     if (phoneNumber.length === 8) {
@@ -19,7 +19,7 @@
 
   console.log(validate("123-4567"));
   console.log(validate("124-567")); // true bug?
-//
+
 //  function validate(phoneNumber) {
 //    return phoneNumber.match(/^\d{3}-?\d{4}$/);
 ////     return (/^\d{3}-?\d{4}$/).test(phoneNumber);

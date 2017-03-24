@@ -1,0 +1,46 @@
+<script>
+  var passengers = [
+                  {name: "김함수", paid: true, ticket: "일반석"},
+                  {name: "닥터 이블", paid: true, ticket: "일등석"},
+                  {name: "박루프", paid: false, ticket: "일등석"},
+                  {name: "최호출", paid: true, ticket: "일반석"}
+                 ];
+
+  function createDrinkOrder(passenger) {
+    var orderFunction;
+
+    if (passenger.ticket === "일등석") {
+      orderFunction = function() {
+        alert("칵테일이나 와인을 드시겠습니까?")
+      };
+    } else {
+      orderFunction = function() {
+        alert("물이나 콜라를 드시겠습니까?");
+      };
+    }
+    return orderFunction;
+  }
+
+  function serveCustomer(passenger) {
+
+    var getDrinkOrderFunction = createDrinkOrder(passenger);
+
+    getDrinkOrderFunction();
+    // 식사 주문 받기
+    getDrinkOrderFunction();
+    getDrinkOrderFunction();
+    // 영화 상영
+    getDrinkOrderFunction();
+    // 쓰레기 비우기
+  }
+
+//  serveCustomer(passengers[0]);
+
+  function servePassengers(passengers) {
+    for(var i = 0; i < passengers.length; i++ ) {
+      serveCustomer(passengers[i]);
+    }
+  }
+
+  servePassengers(passengers);
+</script>

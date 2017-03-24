@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>클릭하세요!</title>
+    <style>
+      body, button { margin: 10px; }
+      div { padding: 10px; }
+    </style>
+    <script>
+      // 542 #1
+//      var count = 0;
+//      window.onload = function() {
+//        var button = document.getElementById("clickme");
+//        button.onclick = handleClick;
+//      };
+//      function handleClick() {
+//        var message = "나를";
+//        var div = document.getElementById("message");
+//        count++;
+//        div.innerHTML = message + count + "번 클릭했습니다!";
+//      }
+
+      // 542 클로저 사용 #2
+      window.onload = function() {
+        var count = 0;
+        var message = "나를";
+        var div = document.getElementById("message");
+        var button = document.getElementById("clickme");
+        button.onclick = function () {
+          count++;
+          div.innerHTML = message + count + "번 클릭했습니다.!";
+        };
+      };
+
+    </script>
+  </head>
+
+  <body>
+    <button id="clickme">나를 클릭하세요!</button>
+    <div id="message"></div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<script>
+  var winner = function() { alert("승!"); };
+  var loser = function() { alert("패")};
+
+  winner();
+
+  var a = winner;
+  var b = loser;
+  var c = loser;
+  a();
+  b();
+
+  c = a;
+  a = b;
+  b = c;
+  c = a;
+  a = c;
+  a = b;
+  b = c;
+  a();
+
+</script>

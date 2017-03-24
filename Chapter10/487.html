@@ -1,0 +1,21 @@
+<script>
+  function fun(echo){
+    console.log(echo);
+  }
+  fun("안녕!");
+  function boo(aFunction) {
+    aFunction("메롱!");
+  }
+  boo(fun);
+  console.log(fun);
+  fun(boo);
+  var moreFun = fun;
+  moreFun("또 안녕!");
+
+  function echoMaker() {
+    return fun;
+  }
+  var bigFun = echoMaker();
+  bigFun("메아리가 울릴까?");
+
+</script>

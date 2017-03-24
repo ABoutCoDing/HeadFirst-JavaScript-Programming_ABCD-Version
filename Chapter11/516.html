@@ -1,0 +1,43 @@
+<script>
+  window.onload = function() {
+    var button = document.getElementById("bake");
+    button.onclick = function () {
+      console.log("쿠키 구울 시간이에요.");
+      cookies.bake(2500);
+    }
+  };
+
+  var cookies = {
+    instrution: "오븐을 350도 예열 하세요...",
+    bake: function(time) {
+      console.log("쿠키를 굽고 있습니다.");
+      setTimeout(done, time);
+    }
+  };
+
+  function done() {
+    alert("쿠키가 다 됐습니다. 식을 때까지 기다리세요.");
+    console.log("쿠키를 식히고 있습니다.");
+    var cool = function() {
+      alert("쿠키가 식었습니다. 어서 드세요!");
+    };
+    setTimeout(cool, 1000);
+  }
+
+//  var cookies = {
+//    instrution: "오븐을 350도 예열 하세요...",
+//    bake: function(time) {
+//      console.log("쿠키를 굽고 있습니다.");
+//      setTimeout( function done() {
+//        alert("쿠키가 다 됐습니다. 식을 때까지 기다리세요.");
+//        console.log("쿠키를 식히고 있습니다.");
+//        var cool = function() {
+//          alert("쿠키가 식었습니다. 어서 드세요!");
+//        };
+//        setTimeout(cool, 1000);
+//      }, time);
+//    }
+//  };
+
+</script>
+<button id="bake" value="bake">bake</button>

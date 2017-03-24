@@ -38,19 +38,19 @@ var model = {
   shipLength: 3,
   shipsSunk: 0,
 
-  ships: [
-          { locations: ["06", "16", "26"], hits: ["", "", ""] },
-          { locations: ["24", "34", "44"], hits: ["", "", ""] },
-          { locations: ["10", "11", "12"], hits: ["", "", ""] }
-        ],
+//  ships: [
+//          { locations: ["06", "16", "26"], hits: ["", "", ""] },
+//          { locations: ["24", "34", "44"], hits: ["", "", ""] },
+//          { locations: ["10", "11", "12"], hits: ["", "", ""] }
+//        ],
 
 
   /* 407 page */
-//  ships: [
-//        { locations: [0, 0, 0], hits: ["", "", ""] },
-//        { locations: [0, 0, 0], hits: ["", "", ""] },
-//        { locations: [0, 0, 0], hits: ["", "", ""] }
-//      ],
+  ships: [
+        { locations: [0, 0, 0], hits: ["", "", ""] },
+        { locations: [0, 0, 0], hits: ["", "", ""] },
+        { locations: [0, 0, 0], hits: ["", "", ""] }
+      ],
 
   /* 380 page */
   fire: function(guess) {
@@ -201,22 +201,22 @@ var controller = {
   }
 }
 
-/* 395 page */
-//controller.processGuess("A0");
+///* 395 page */
+////controller.processGuess("A0");
+////
+////controller.processGuess("A6");
+////controller.processGuess("B6");
+////controller.processGuess("C6");
+////
+////controller.processGuess("C4");
+////controller.processGuess("D4");
+////controller.processGuess("E4");
+////
+////controller.processGuess("B0");
+////controller.processGuess("B1");
+////controller.processGuess("B2");
 //
-//controller.processGuess("A6");
-//controller.processGuess("B6");
-//controller.processGuess("C6");
 //
-//controller.processGuess("C4");
-//controller.processGuess("D4");
-//controller.processGuess("E4");
-//
-//controller.processGuess("B0");
-//controller.processGuess("B1");
-//controller.processGuess("B2");
-
-
 /* 397 page */
 function init() {
   var fireButton = document.getElementById("fireButton");

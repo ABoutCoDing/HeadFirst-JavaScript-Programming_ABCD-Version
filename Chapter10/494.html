@@ -1,0 +1,63 @@
+<script>
+  var passengers = [
+                  {name: "김함수", paid: true, ticket: "일반석"},
+                  {name: "닥터 이블", paid: true, ticket: "일등석"},
+                  {name: "박루프", paid: false, ticket: "일등석"},
+                  {name: "최호출", paid: true, ticket: "일반석"}
+                 ];
+
+  function createDrinkOrder(passenger) {  // 로직 구간
+    var orderFunction;
+
+    if (passenger.ticket === "일등석") {
+      orderFunction = function() {
+        alert("칵테일이나 와인을 드시겠습니까?");
+      };
+    } else {
+      orderFunction = function() {
+        alert("물이나 콜라를 드시겠습니까?");
+      };
+    }
+    return orderFunction;
+  }
+
+  function createDinnerOrder(passenger) {
+
+    var dinnerOrderFunction;
+
+    if (passenger.ticket === "일등석") {
+      dinnerOrderFunction = function() {
+        alert("닭이나 파스타");
+      };
+    } else if (passenger.ticket === "우등석") {
+      dinnerOrderFunction = function() {
+        alert("과자나 치즈");
+      };
+    } else {
+      dinnerOrderFunction = function() {
+        alert("땅콩이나 프레첼");
+      };
+    }
+    return dinnerOrderFunction;
+  }
+
+  function serveCustomer(passenger) {
+
+    var getDrinkOrderFunction = createDrinkOrder(passenger);  // 실행 함수 리턴
+
+    getDrinkOrderFunction();
+
+    var getDinnerOrderFunction = createDinnerOrder(passenger);
+
+    getDinnerOrderFunction();
+
+  }
+
+  function servePassengers(passengers) {
+    for(var i = 0; i < passengers.length; i++ ) {
+      serveCustomer(passengers[i]);
+    }
+  }
+
+  servePassengers(passengers);
+</script>

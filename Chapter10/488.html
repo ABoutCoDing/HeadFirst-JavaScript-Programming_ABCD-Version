@@ -1,0 +1,36 @@
+<script>
+
+  var passengers = [
+                    {name: "김함수", paid: true, ticket: "일반석"},
+                    {name: "닥터 이블", paid: true, ticket: "일등석"},
+                    {name: "박루프", paid: false, ticket: "일등석"},
+                    {name: "최호출", paid: true, ticket: "일반석"}
+                   ];
+
+//  function serveCustomer(passenger) {
+//    if (passenger.ticket === "일등석") {
+//      alert("칵테일이나 와인을 드시겠습니까?");
+//    } else {
+//      alert("물이나 콜라를 드시겠습니까?");
+//    }
+//  }
+//
+//  serveCustomer(passengers[0]);
+
+  function createDrinkOrder(passenger) {
+    if (passenger.ticket === "일등석") {
+      alert("칵테일이나 와인을 드시겠습니까?");
+    } else {
+      alert("물이나 콜라를 드시겠습니까?");
+    }
+  }
+
+  function serveCustomer(passenger) {
+    createDrinkOrder(passenger);
+    createDrinkOrder(passenger);
+    createDrinkOrder(passenger);
+  }
+
+
+
+</script>
