@@ -1,0 +1,20 @@
+<script>
+  function printArgs() {
+    for(var i = 0; i < arguments.length; i++ ){
+      console.log(arguments[i]);
+    }
+  }
+  printArgs("하나", 2, 1+2, "넷");
+
+
+  function emote(kind) {
+    if (kind === "침묵") {
+      console.log("게이머가 조용히 앉아 있습니다.");
+    } else if (kind === "대화") {
+      console.log("게이머가 '" + arguments[1] + "' 라고 말했습니다." );
+    }
+  }
+
+  emote("침묵");
+  emote("대화", "물러서!");
+</script>

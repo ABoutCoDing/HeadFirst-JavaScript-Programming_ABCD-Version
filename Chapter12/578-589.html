@@ -1,0 +1,40 @@
+<script>
+  function Car(params){
+    this.make = params.make;
+    this.model = params.model;
+    this.year = params.year;
+    this.color = params.color;
+    this.passengers = params.passengers;
+    this.convertible = params.convertible;
+    this.mileage = params.mileage;
+
+    this.start = function() {
+      this.started = true;
+    };
+    this.stop = function() {
+      this.started = false;
+    };
+    this.drive = function() {
+      if (this.started) {
+        console.log(this.make + " " + this.model + " 가 붕붕 달립니다!");
+      } else {
+        console.log("먼저 시동을 거세요.");
+      }
+    }
+  };
+
+  var cadiParams = {make: "GM",
+                  model: "캐딜락",
+                  year: 1955,
+                  color: "갈색",
+                  passengers: 5,
+                  convertible: false,
+                  mileage: 12892 };
+
+  var cadi = new Car(cadiParams);
+
+  cadi.start();
+  cadi.drive();
+  cadi.drive();
+  cadi.stop();
+</script>

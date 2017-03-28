@@ -1,0 +1,42 @@
+<script>
+  function Robot(name, year, owner){
+    this.name = name;
+    this.year = year;
+    this.owner = owner;
+  }
+
+  Robot.prototype.maker = "오브젝트자러스";
+  Robot.prototype.speak = function() {
+    alert("경고 경고!!");
+  };
+  Robot.prototype.makeCoffee = function() {
+    alert("커피 만들기");
+  };
+  Robot.prototype.blinkLights = function() {
+    alert("깜빡 깜빡");
+  };
+
+  var robby = new Robot("로비", 1956, "닥터 뫼비우스");
+  var rosie = new Robot("로지", 1962, "조지 제트슨");
+
+  robby.onOffSwitch = true;
+  robby.makeCoffee = function() {
+    alert("스타벅스에서 커피를 사옵니다.")
+  };
+
+  rosie.cleanHouse = function() {
+    alert("청소중! 잠시 후 깔끔해집니다...");
+  };
+
+  console.log( robby.name + "는 " + robby.maker +
+              "에 의해 " + robby.year + "년에 생산되었고, " + robby.owner
+              + "가 소유하고 있습니다." );
+  robby.makeCoffee();
+  robby.blinkLights();
+
+  console.log(rosie.name + "는 " + rosie.maker +
+             "에 의해 " + rosie.year + "년에 생산되었고, " + rosie.owner
+             + "가 소유하고 있습니다.");
+  rosie.cleanHouse();
+
+</script>

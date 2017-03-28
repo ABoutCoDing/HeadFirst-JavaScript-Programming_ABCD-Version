@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>제이쿼리</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <style>
+      .favorite {
+        background-color: red;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        alert("페이지 로딩 완료");
+        $("#buynow").click(function() {
+          alert("지금 구매");
+        });
+        $("a").click(function() {
+          alert("a 지금 구매");
+        });
+
+        $("#playlist > li").addClass("favorite");
+
+        $("#specialoffer").click(function(){
+          $(this).fadeOut(800, function() {
+            $(this).fadeIn(400);
+          });
+        })
+      });
+    </script>
+  </head>
+
+  <body>
+    <p id="buynow">buynow</p>
+    <a id="aClick">aClick</a>
+    <div id="playlist">
+      <li>에라이</li>
+    </div>
+    <div id="specialoffer">specialoffer</div>
+  </body>
+</html>

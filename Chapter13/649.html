@@ -1,0 +1,31 @@
+<script>
+  String.prototype.palindrome = function() {
+    var len = this.length - 1;
+    for (var i = 0; i <= len; i++){
+      if (this.charAt(i) !== this.charAt(len-i)) {
+        return false;
+      }
+      if (i === (len-1)) {
+        return true;
+      }
+    }
+    return true;
+  };
+
+//  String.prototype.palindrome = function() {
+//    var r = this.split("").reverse().join("");
+//    return (r === this.valueOf()); // 뒤집어도 처음과 같다면  string 이면
+//  }
+
+  var phrases = ["eve", "kayak", "mom", "wow", "aaaabaaaa", "펠린드롬"];
+
+  for (var i = 0; i < phrases.length; i++) {
+    var phrase = phrases[i];
+    if (phrase.palindrome()) {
+      console.log("'" + phrase + "'은 팰린드롬입니다.");
+    } else {
+      console.log("'" + phrase + "'은 팰린드롬이 아닙니다.");
+    }
+  }
+
+</script>

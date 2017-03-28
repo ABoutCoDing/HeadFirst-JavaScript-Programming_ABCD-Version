@@ -1,0 +1,51 @@
+<script>
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.bark = function() {
+      if (this.weight > 25) {
+        alert(this.name + "는 월월 짖어요!");
+      } else {
+        alert(this.name + "는 깽깽 짖어요!")
+      }
+    }
+  };
+
+  function Car(params){
+    this.make = params.make;
+    this.model = params.model;
+    this.year = params.year;
+    this.color = params.color;
+    this.passengers = params.passengers;
+    this.convertible = params.convertible;
+    this.mileage = params.mileage;
+
+    this.start = function() {
+      this.started = true;
+    };
+    this.stop = function() {
+      this.started = false;
+    };
+    this.drive = function() {
+      if (this.started) {
+        console.log(this.make + " " + this.model + " 가 붕붕 달립니다!");
+      } else {
+        console.log("먼저 시동을 거세요.");
+      }
+    }
+  };
+
+  var limoParams = {make: "웹타운 모터스",
+                   model: "리무진",
+                   year: 1983,
+                   color: "검정색",
+                   passengers: 12,
+                   convertible: true,
+                   mileage: 21120};
+  var limo = new Car(limoParams);
+  var limoDog = new Dog("우울한 랩소디", "푸들", 40);
+
+  console.log(limo.make + " " + limo.model + "의 형은 " + typeof limo + "입니다.");
+  console.log(limoDog.name + "의 형은 " + typeof limoDog + "입니다.");
+</script>

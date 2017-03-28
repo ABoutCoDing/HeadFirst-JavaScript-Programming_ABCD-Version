@@ -1,0 +1,29 @@
+<script>
+  function Robot(name, year, owner) {
+    this.name = name;
+    this.year = year;
+    this.owner = owner;
+  }
+
+  Robot.prototype.maker = "오브젝트 자러스";
+  Robot.prototype.errorMessage = "전체 시스템 작동중";
+  Robot.prototype.reportError = function() {
+    console.log(this.name + " 메시지 : " + this.errorMessage);
+  }
+  Robot.prototype.spillWater = function() {
+    this.errorMessage = "회로가 합선된 것 같습니다.";
+  }
+
+  var robby = new Robot("로비", 1956, "닥터 뫼비우스");
+  var rosie = new Robot("로지", 1962, "조지 제트슨");
+
+  rosie.reportError();
+  robby.reportError();
+  robby.spillWater();
+  rosie.reportError();
+  robby.reportError();
+
+  console.log(robby.hasOwnProperty("errorMessage"));
+  console.log(rosie.hasOwnProperty("errorMessage"));
+
+</script>

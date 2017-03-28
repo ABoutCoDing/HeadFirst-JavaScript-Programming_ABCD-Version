@@ -1,0 +1,39 @@
+<script>
+  function Robot(){
+
+  }
+
+  function SpaceRobot(name, year, owner, homePlanet) {
+    this.name = name;
+    this.year = year;
+    this.owner = owner;
+    this.homePlanet = homePlanet;
+    this.maker = "maker";
+    this.makeCoffee = function() {
+      console.log("makeCoffee");
+    };
+    this.brinkLights = function() {
+      console.log("brainkLights");
+    };
+  }
+
+  SpaceRobot.prototype = new Robot();
+
+  SpaceRobot.prototype.speak = function(){
+    alert(this.name + " : 제가 의견을 말해도 된다면... ");
+  };
+
+  SpaceRobot.prototype.pilot = function() {
+    alert(this.name + " : 추진체요? 그게 중요한가요?");
+  };
+
+  var c3po = new SpaceRobot("C3PO", 1977, "루크 스카이워커", "타투완");
+  c3po.speak();
+  c3po.pilot();
+  console.log(c3po.name + "는 " + c3po.maker + "가 만들었습니다.");
+
+  var simon = new SpaceRobot("시이몬", 2009, "칼라 다이아나", "칼라 다이아나");
+  simon.makeCoffee();
+  simon.brinkLights();
+  simon.speak();
+</script>

@@ -1,0 +1,14 @@
+<script>
+  function Album(title, artist, year) {
+    this.title = title;
+    this.artist = artist;
+    this.year = year;
+    this.play = function() {
+      // 재생 코드
+    };
+  }
+  var darkside = Album("다크 사이드 오브 더 치즈", "핑크 마우스", 1971);
+  darkside.play();
+
+  // Uncaught TypeError: Cannot read property 'play' of undefined
+</script>

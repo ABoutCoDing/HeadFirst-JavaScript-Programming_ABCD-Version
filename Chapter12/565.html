@@ -1,0 +1,23 @@
+<script>
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+  }
+  var fido = new Dog("피도", "잡종", 38);
+  var fluffy = new Dog("플러피", "푸들", 30);
+  var spot = new Dog("스포트", "치와와", 10);
+
+  var dogs = [fido, fluffy, spot];
+
+  for (var i=0; i < dogs.length; i++){
+    var size = "작은 ";
+    if (dogs[i].weight > 10) {
+      size = "큰";
+    }
+    console.log("개 : " + dogs[i].name
+                        + "는 " + size
+                        + dogs[i].breed + " 중입니다."
+               );
+  }
+</script>

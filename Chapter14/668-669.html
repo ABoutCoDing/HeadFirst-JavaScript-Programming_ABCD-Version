@@ -1,0 +1,30 @@
+<script>
+//  window.addEventListener("load", init, false);
+//  function init(){
+//
+//  }
+
+  window.onload = function() {
+    var div = document.getElementById("clickme");
+    if (div.addEventListener) {
+      div.addEventListener("click", handleClick, false);
+    } else if (div.attachEvent) {
+      div.attchEvent("onclick", handleClick);
+    }
+  }
+
+  function handleClick(e) {
+    var evt = e || window.event;
+    var target;
+    if (evt.target) {
+      target = evt.target;
+    } else {
+      target = evt.srcElement;
+    }
+    alert(target.id + "를 클릭했습니다.");
+    target.removeEventListener("click", handleClick, false);
+  }
+
+</script>
+
+<div id="clickme">clickme</div>

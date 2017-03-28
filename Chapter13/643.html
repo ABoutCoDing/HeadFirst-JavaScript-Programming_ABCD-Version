@@ -1,0 +1,49 @@
+<script>
+  function Dog (name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.bark = function() {
+      if (this.weight > 25) {
+        console.log(this.name + "는 월월 짖어요!");
+      } else if (this.weight === 10) {
+        console.log(this.name + "는 멍멍 짖어요!");
+      } else {
+        console.log(this.name + "는 깽깽 짖어요!")
+      }
+    }
+  }
+
+  function ShowDog(name, breed, weight, handler) {
+    Dog.call(this, name, breed, weight);
+    this.handler;
+  }
+
+  ShowDog.prototype = new Dog();
+  ShowDog.prototype.construtor = ShowDog;
+  ShowDog.prototype.league = "웹타운";
+  ShowDog.prototype.stack = function() {
+    console.log("차렷");
+  };
+  ShowDog.prototype.bait = function() {
+    console.log("간식");
+  };
+  ShowDog.prototype.gait = function(kind) {
+    console.log(kind + "하는 중");
+  };
+  ShowDog.prototype.groom = function() {
+    console.log("빗질");
+  };
+  var fido = new Dog("피도", "잡종", 38);
+  var fluffy = new Dog("플러피", "푸들", 30);
+  var spot = new Dog("스포트", "치와와", 10);
+  var scotty = new ShowDog("스카티", "스코틀랜드 테리어", 15, "쿠키");
+  var beatrice = new ShowDog("베아트리체", "포메라이안", 5, "헤밀톤");
+  fido.bark();
+  fluffy.bark();
+  spot.bark();
+  scotty.bark();
+  beatrice.bark();
+  scotty.gait("걷기");
+  beatrice.groom();
+</script>

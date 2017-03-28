@@ -1,0 +1,39 @@
+<script>
+
+  function Dog (name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+  }
+
+  function ShowDog(name, breed, weight, handler) {
+    Dog.call(this, name, breed, weight);
+//    this.name = name;
+//    this.breed = breed;
+//    this.weight = weight;
+    this.handler = handler;
+  }
+
+  ShowDog.prototype = new Dog();
+  ShowDog.prototype.constructor = ShowDog;
+
+//  var fido = new Dog("피도", "잡종", 38);
+//  if (fido instanceof Dog) {
+//    console.log("피도는 Dog의 객체입니다.");
+//  }
+//  if (scotty instanceof ShowDog) {
+//    console.log("피도는 ShowDog의 객체입니다.");
+//  }
+//
+//  var scotty = new ShowDog("스카티", "스코틀랜드 테리어", 15, "쿠키");
+//  if (scotty instanceof Dog) {
+//    console.log("스카티는 Dog의 객체입니다.");
+//  }
+//  if (scotty instanceof ShowDog) {
+//    console.log("스카티는 ShowDog의 객체입니다.");
+//  }
+//
+//  console.log("피도의 생성자 : " + fido.constructor);
+//  console.log("스카티의 생성자 : " + scotty.constructor);
+
+</script>

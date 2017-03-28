@@ -1,0 +1,41 @@
+<script>
+  function Car(make, model, year, color, passengers, convertible, mileage){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+    this.passengers = passengers;
+    this.convertible = convertible;
+    this.mileage = mileage;
+
+    this.start = function() {
+      this.started = true;
+    };
+    this.stop = function() {
+      this.started = false;
+    };
+    this.drive = function() {
+      if (this.started) {
+        console.log(this.make + " " + this.model + " 가 붕붕 달립니다!");
+      } else {
+        console.log("먼저 시동을 거세요.");
+      }
+    }
+  };
+
+  var chevy = new Car("쉐보레", "벨 에어", "1957", "빨간색", 2, false, 1021);
+  var cadi = new Car("GM", "캐딜락", 1955, "갈색", 5, false, 12892);
+  var taxi = new Car("웹타운 모터스", "택시", 1955, "노란색", 4, false, 28134);
+  var fiat = new Car("피아트", "500", 1957, "암청색", 2, false, 88000);
+
+  var testCar = new Car("웹타운 모터스", "테스트 카", 2014, "바다색", 2, true, 21);
+
+  var cars = [chevy, cadi, taxi, fiat, testCar];
+
+  for(var i = 0; i < cars.length; i++ ){
+    cars[i].start();
+    cars[i].drive();
+    cars[i].drive();
+    cars[i].stop();
+  }
+</script>

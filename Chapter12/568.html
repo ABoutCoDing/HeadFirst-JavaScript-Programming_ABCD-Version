@@ -1,0 +1,24 @@
+<script>
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.bark = function() {
+      if (this.weight > 25) {
+        alert(this.name + "는 월월 짖어요!");
+      } else {
+        alert(this.name + "는 깽깽 짖어요!")
+      }
+    }
+  };
+
+  var fido = new Dog("피도", "잡종", 38);
+  var fluffy = new Dog("플러피", "푸들", 30);
+  var spot = new Dog("스포트", "치와와", 10);
+  var dogs = [fido, fluffy, spot];
+
+  for (var i = 0; i < dogs.length; i++) {
+    dogs[i].bark();
+  }
+
+</script>

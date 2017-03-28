@@ -1,0 +1,24 @@
+<script>
+  function Coffee(roast, ounces) {
+    this.roast = roast;
+    this.ounces = ounces;
+    this.getSize = function () {
+      if (this.ounces === 8) {
+        return "작은";
+      } else if ( this.ounces === 12) {
+        return "중간";
+      } else if ( this.ounces === 16) {
+        return "큰";
+      }
+    };
+    this.toString = function () {
+      return this.getSize() + " 크기의 " + this.roast + "를 주문했습니다.";
+    };
+  }
+
+  var houseBlend = new Coffee("하우스 블랜드", 12);
+  console.log(houseBlend.toString());
+
+  var darkRoast = new Coffee("다크 로스트", 16);
+  console.log(darkRoast.toString());
+</script>

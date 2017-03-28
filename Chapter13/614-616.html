@@ -1,0 +1,43 @@
+<script>
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.fontWeight = weight;
+  }
+
+  Dog.prototype.species = "개과";
+  Dog.prototype.bark = function () {
+    if (this.weight > 25) {
+      console.log(this.name + "는 월월 짖어요!");
+    } else {
+      console.log(this.name + "는 깽깽 짖어요!");
+    }
+  };
+  Dog.prototype.run = function() {
+    console.log("달리기");
+  };
+  Dog.prototype.wag = function() {
+    console.log("꼬리 흔들기");
+  }
+
+
+  var fido = new Dog("피도", "잡종", 38);
+  var fluffy = new Dog("플러피", "푸들", 30);
+  var spot = new Dog("스포트", "치와와", 10);
+
+//  spot.bark = function() {
+//    console.log(this.name + "는 멍멍 짖어요!");
+//  };
+
+  fido.bark();
+  fido.run();
+  fido.wag();
+
+  fluffy.bark();
+  fluffy.run();
+  fluffy.wag();
+
+  spot.bark();
+  spot.run();
+  spot.wag();
+</script>

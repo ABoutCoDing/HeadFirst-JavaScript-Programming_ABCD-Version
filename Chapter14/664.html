@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>곡</title>
+    <script>
+      var x = 49;
+    </script>
+  </head>
+
+  <body>
+    <ul id="playlist" class="song">
+      <li>tt</li>
+      <li>아츄</li>
+      <li>벚꽃엔딩</li>
+    </ul>
+
+    <input type="text" name="inputText" />
+
+    <script>
+      var getElementsByClassName = document.getElementsByClassName("song");
+      var getElementsByName = document.getElementsByName("inputText");
+//      document.querySelector();
+      var querySelectorAll = document.querySelectorAll("li");
+
+
+
+      var li = document.querySelector("#playlist .song");
+
+      var newItem = document.createElement("li");
+      newItem.innerHTML = "무작위 선택곡";
+      var ul = document.getElementById("playlist");
+      ul.appendChild(newItem);
+    </script>
+  </body>
+</html>
+
+

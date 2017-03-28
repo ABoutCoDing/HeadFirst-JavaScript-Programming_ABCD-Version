@@ -1,0 +1,29 @@
+<script>
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.fontWeight = weight;
+  }
+
+  var fido = new Dog("피도", "잡종", 38);
+  var fluffy = new Dog("플러피", "푸들", 30);
+  var spot = new Dog("스포트", "치와와", 10);
+
+  var barnaby = new Dog("바나비", "바셋 하운드", 55);
+
+  Dog.prototype.sitting = false;
+
+  Dog.prototype.sit = function() {
+    if (this.sitting) {
+      console.log(this.name + "가 이미 앉아 있습니다.");
+    } else {
+      this.sitting = true;
+      console.log(this.name + "가 앉습니다.");
+    }
+  };
+
+  barnaby.sit();
+  barnaby.sit();
+  spot.sit();
+  spot.sit();
+</script>

@@ -1,0 +1,13 @@
+<script>
+  function Dog() {
+  }
+
+  function ShowDog(name, breed, weight, handler) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.handler = handler;
+  }
+
+  ShowDog.prototype = new Dog();
+</script>
