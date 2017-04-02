@@ -1,0 +1,17 @@
+<script>
+  var x = 10; // free variable
+  function foo() {
+    var y = 20; // free variable
+    function bar() {
+      var z = 15; // free variable
+      var output = x + y + z;
+      return output;
+    }
+    return bar;
+  }
+
+  var barFunction = foo();
+  console.log(barFunction());
+
+  // https://medium.freecodecamp.com/lets-learn-javascript-closures-66feb44f6a44
+</script>
