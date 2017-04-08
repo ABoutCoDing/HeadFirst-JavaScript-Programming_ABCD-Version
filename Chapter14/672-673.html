@@ -1,19 +1,25 @@
 <script>
   function fibonacci(n) {
     if (n === 0 || n === 1) {
-      console.log("return 1");
       return 1;
     } else {
       return (fibonacci(n-1) + fibonacci(n-2));
     }
   }
 
-  for (var i = 0; i < 10; i++) {
-    console.log("index ::: " + i);
+  for (var i = 0; i < 5; i++) {
     console.log(i + "번째 피보나치 수 : " + fibonacci(i));
   }
   // 0 1 2 3 4 5 6      index
   // 1 1 2 3 5 8 13     피보나치수
+
+
+  // case 4
+//  4
+//  3               2
+//  2       1       1       0
+//  1   0                   1
+//      1
 
   // case 5
 //  5
