@@ -17,7 +17,7 @@
     };
   }
 
-  SpaceRobot.prototype = new Robot();
+  SpaceRobot.prototype = new Robot(); // 상속을 하려면
 
   SpaceRobot.prototype.speak = function(){
     alert(this.name + " : 제가 의견을 말해도 된다면... ");
@@ -30,10 +30,18 @@
   var c3po = new SpaceRobot("C3PO", 1977, "루크 스카이워커", "타투완");
   c3po.speak();
   c3po.pilot();
+  console.log(c3po.hasOwnProperty("makeCoffee"));
   console.log(c3po.name + "는 " + c3po.maker + "가 만들었습니다.");
 
   var simon = new SpaceRobot("시이몬", 2009, "칼라 다이아나", "칼라 다이아나");
   simon.makeCoffee();
   simon.brinkLights();
   simon.speak();
+
+  // 추가 : 프로토 타입을 사용해야만 인스턴스화 된 후 기능을 바꿀 수 있다.
+  Robot.prototype.testFunc = function() {
+    console.log('test');
+  }
+  simon.testFunc();
+
 </script>
