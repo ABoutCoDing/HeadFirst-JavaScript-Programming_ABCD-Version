@@ -13,7 +13,7 @@
     this.handler = handler;
   }
   ShowDog.prototype = new Dog();
-//  ShowDog.prototype.constructor = ShowDog;
+  ShowDog.prototype.constructor = ShowDog;
 
   var fido = new Dog("피도", "잡종", 38);
   if (fido instanceof Dog) {
